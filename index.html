@@ -41,6 +41,20 @@
       z-index: 1;
     }
 
+    .knob-shadow {
+      position: absolute;
+      width: 52px;
+      height: 14px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.25);
+      filter: blur(8px);
+      right: 58px;
+      top: calc(60% + 26px);
+      transform: translateY(-50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .knob-img.spin {
       animation: knob-spin 0.35s ease-out forwards;
     }
@@ -237,12 +251,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
+      color: #000;
       font-size: 13px;
       font-weight: 700;
       text-align: center;
       padding: 10px;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
       line-height: 1.3;
     }
 
@@ -265,6 +278,7 @@
   <!-- ── Gacha machine ── -->
   <div class="machine-wrapper">
     <img src="gacha_machine.png" alt="Gacha Machine" class="machine-img">
+    <div class="knob-shadow"></div>
     <img src="knob.png" alt="Knob" class="knob-img" id="knob">
   </div>
 
